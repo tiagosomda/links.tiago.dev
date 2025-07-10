@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago's Links - links.tiago.dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/150/4f46e5/ffffff?text=T" alt="Tiago's Profile Picture" id="profile-img">
+            </div>
+            <h1 class="name">Tiago</h1>
+            <p class="bio">Developer • Tech Enthusiast • Content Creator</p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links">
+            <a href="#" class="link-item" data-link="portfolio">
+                <div class="link-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Portfolio</span>
+                    <span class="link-description">Check out my latest projects</span>
+                </div>
+            </a>
+
+            <a href="#" class="link-item" data-link="blog">
+                <div class="link-icon">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Blog</span>
+                    <span class="link-description">Read my latest articles</span>
+                </div>
+            </a>
+
+            <a href="#" class="link-item" data-link="projects">
+                <div class="link-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Open Source Projects</span>
+                    <span class="link-description">Explore my contributions</span>
+                </div>
+            </a>
+
+            <a href="#" class="link-item" data-link="newsletter">
+                <div class="link-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Newsletter</span>
+                    <span class="link-description">Stay updated with my content</span>
+                </div>
+            </a>
+
+            <a href="#" class="link-item" data-link="contact">
+                <div class="link-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Contact Me</span>
+                    <span class="link-description">Let's work together</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="social-links">
+            <a href="#" class="social-link" data-social="twitter" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" data-social="linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-link" data-social="github" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" data-social="youtube" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="social-link" data-social="instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Tiago. Made with ❤️</p>
+        </footer>
+    </div>
+
+    <!-- Optional: Add some basic interaction -->
+    <script>
+        // Add click analytics or animations here if needed
+        document.querySelectorAll('.link-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Add your analytics or tracking code here
+                console.log('Link clicked:', this.dataset.link);
+            });
+        });
+
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Add your analytics or tracking code here
+                console.log('Social link clicked:', this.dataset.social);
+            });
+        });
+    </script>
+</body>
+</html>
