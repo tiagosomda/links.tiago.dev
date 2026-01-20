@@ -87,7 +87,7 @@ body::before {
 .container {
     max-width: min(480px, 100%);
     margin: 0 auto;
-    background: var(--color-surface);
+    background: rgba(26, 26, 26, 0.2);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: var(--radius-lg);
