@@ -185,6 +185,21 @@ body::before {
     51%, 100% { opacity: 0; }
 }
 
+.typed-char {
+    animation: glowFade 0.8s ease-out forwards;
+}
+
+@keyframes glowFade {
+    0% {
+        text-shadow: 0 0 10px #ff9500, 0 0 20px #ff9500, 0 0 30px #ffb347;
+        color: #ffffff;
+    }
+    100% {
+        text-shadow: none;
+        color: var(--color-text-muted);
+    }
+}
+
 /* Links section */
 .links {
     margin-bottom: var(--spacing-sm);

@@ -104,9 +104,11 @@
             const text = lines[currentLine];
 
             if (currentChar < text.length) {
-                // Insert character before the cursor
-                const charNode = document.createTextNode(text.charAt(currentChar));
-                targetElement.insertBefore(charNode, cursor);
+                // Create a span with glow effect for each character
+                const charSpan = document.createElement('span');
+                charSpan.textContent = text.charAt(currentChar);
+                charSpan.className = 'typed-char';
+                targetElement.insertBefore(charSpan, cursor);
                 currentChar++;
                 setTimeout(typeWriter, typingSpeed);
             } else if (currentLine === 0) {
@@ -117,8 +119,13 @@
                     currentChar = 0;
                     typeWriter();
                 }, pauseBetweenLines);
+            } else {
+                // Finished second line, hide cursor after 2 seconds
+                setTimeout(() => {
+                    cursor.style.opacity = '0';
+                    cursor.style.transition = 'opacity 0.3s ease';
+                }, 2000);
             }
-            // After second line, cursor just keeps blinking (handled by CSS)
         }
 
         // Start after initial animations complete
