@@ -139,7 +139,7 @@ body::before {
 .profile-bio {
     font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     color: var(--color-text-muted);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
     line-height: 1.4;
 }
 
@@ -147,7 +147,7 @@ body::before {
     font-size: clamp(0.9rem, 2.5vw, 1rem);
     color: var(--color-primary);
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--spacing-xs);
     line-height: 1.4;
 }
 
