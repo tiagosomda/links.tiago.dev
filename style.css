@@ -221,7 +221,7 @@ body::before {
 .link-icon {
     width: clamp(20px, 5vw, 24px);
     height: clamp(20px, 5vw, 24px);
-    margin-right: var(--spacing-xs);
+    margin-right: var(--spacing-sm);
     border-radius: 4px;
     object-fit: contain;
     transition: transform 0.3s ease;
