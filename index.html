@@ -129,8 +129,8 @@
                 targetElement.insertBefore(spaceSpan, cursor);
                 // Hide cursor after 2 seconds
                 setTimeout(() => {
-                    cursor.style.transition = 'opacity 0.3s ease';
-                    cursor.style.opacity = '0';
+                    cursor.style.animation = 'none';
+                    cursor.style.display = 'none';
                 }, 2000);
             }
         }
