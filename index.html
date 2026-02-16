@@ -18,8 +18,8 @@
             <h1 class="profile-name">TIAGO</h1>
             <p class="profile-studio">Developer @ Pretty Games</p>
             <div class="tagline">
-                <span class="tagline-line" id="tagline-1"></span>
-                <span class="tagline-line" id="tagline-2"><span class="cursor">_</span></span>
+                <span class="tagline-line" id="tagline-1"><span class="cursor">_</span></span>
+                <span class="tagline-line" id="tagline-2"></span>
             </div>
         </div>
 
@@ -104,12 +104,15 @@
             const text = lines[currentLine];
 
             if (currentChar < text.length) {
-                targetElement.textContent += text.charAt(currentChar);
+                // Insert character before the cursor
+                const charNode = document.createTextNode(text.charAt(currentChar));
+                targetElement.insertBefore(charNode, cursor);
                 currentChar++;
                 setTimeout(typeWriter, typingSpeed);
             } else if (currentLine === 0) {
-                // Finished first line, blink cursor for 2 seconds then move to next line
+                // Finished first line, move cursor to second line then continue
                 setTimeout(() => {
+                    tagline2.appendChild(cursor);
                     currentLine = 1;
                     currentChar = 0;
                     typeWriter();
