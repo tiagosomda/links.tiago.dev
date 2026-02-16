@@ -112,7 +112,10 @@
                 currentChar++;
                 setTimeout(typeWriter, typingSpeed);
             } else if (currentLine === 0) {
-                // Finished first line, move cursor to second line then continue
+                // Add space at end of line, then move cursor to second line
+                const spaceSpan = document.createElement('span');
+                spaceSpan.innerHTML = '&nbsp;';
+                targetElement.insertBefore(spaceSpan, cursor);
                 setTimeout(() => {
                     tagline2.appendChild(cursor);
                     currentLine = 1;
@@ -120,7 +123,11 @@
                     typeWriter();
                 }, pauseBetweenLines);
             } else {
-                // Finished second line, hide cursor after 2 seconds
+                // Add space at end of second line
+                const spaceSpan = document.createElement('span');
+                spaceSpan.innerHTML = '&nbsp;';
+                targetElement.insertBefore(spaceSpan, cursor);
+                // Hide cursor after 2 seconds
                 setTimeout(() => {
                     cursor.style.opacity = '0';
                     cursor.style.transition = 'opacity 0.3s ease';
