@@ -138,9 +138,12 @@ body::before {
     background-clip: text;
     position: relative;
     z-index: 2;
-    margin-top: -1.25rem;
-    -webkit-text-stroke: 2px #000;
-    paint-order: stroke fill;
+    margin-top: -1.7rem;
+    text-shadow:
+        0 0 10px #ff9500,
+        0 0 20px #ff9500,
+        0 0 30px #ff9500,
+        0 0 40px #ffb347;
 }
 
 .profile-bio {
