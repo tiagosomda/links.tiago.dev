@@ -17,8 +17,11 @@
             </div>
             <h1 class="profile-name">TIAGO</h1>
             <p class="profile-studio">Developer @ Pretty Games</p>
-            <p class="profile-bio">stay-at-home dad by day</p>
-            <p class="profile-bio">game dev by naptime</p>
+            <div class="tagline">
+                <span class="tagline-line" id="tagline-1"></span>
+                <span class="tagline-line" id="tagline-2"></span>
+                <span class="cursor">_</span>
+            </div>
         </div>
 
         <div class="links">
@@ -83,5 +86,41 @@
             </div>
         </div>
     </main>
+    <script>
+        const lines = [
+            "stay-at-home dad by day",
+            "game dev by naptime"
+        ];
+        const typingSpeed = 50;
+        const pauseBetweenLines = 2000;
+
+        let currentLine = 0;
+        let currentChar = 0;
+        const tagline1 = document.getElementById('tagline-1');
+        const tagline2 = document.getElementById('tagline-2');
+        const cursor = document.querySelector('.cursor');
+
+        function typeWriter() {
+            const targetElement = currentLine === 0 ? tagline1 : tagline2;
+            const text = lines[currentLine];
+
+            if (currentChar < text.length) {
+                targetElement.textContent += text.charAt(currentChar);
+                currentChar++;
+                setTimeout(typeWriter, typingSpeed);
+            } else if (currentLine === 0) {
+                // Finished first line, blink cursor for 2 seconds then move to next line
+                setTimeout(() => {
+                    currentLine = 1;
+                    currentChar = 0;
+                    typeWriter();
+                }, pauseBetweenLines);
+            }
+            // After second line, cursor just keeps blinking (handled by CSS)
+        }
+
+        // Start after initial animations complete
+        setTimeout(typeWriter, 1500);
+    </script>
 </body>
 </html>
