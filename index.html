@@ -127,10 +127,10 @@
                 const spaceSpan = document.createElement('span');
                 spaceSpan.innerHTML = '&nbsp;';
                 targetElement.insertBefore(spaceSpan, cursor);
-                // Hide cursor after 2 seconds
+                // Replace cursor with space after 2 seconds
                 setTimeout(() => {
+                    cursor.textContent = ' ';
                     cursor.style.animation = 'none';
-                    cursor.style.display = 'none';
                 }, 2000);
             }
         }
