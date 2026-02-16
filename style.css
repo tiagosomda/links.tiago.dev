@@ -253,6 +253,7 @@ body::before {
     color: var(--color-text-muted);
     opacity: 0.7;
     line-height: 1.2;
+    padding-left: calc(clamp(20px, 5vw, 24px) + var(--spacing-sm));
 }
 
 /* Footer */
