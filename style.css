@@ -128,7 +128,7 @@ body::before {
 }
 
 .profile-name {
-    font-size: clamp(3.5rem, 10vw, 4rem);
+    font-size: clamp(2.8rem, 8vw, 3.2rem);
     font-weight: 700;
     margin-bottom: 0.25rem;
     color: #ffffff;
