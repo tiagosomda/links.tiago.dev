@@ -89,7 +89,7 @@ body::before {
 
 /* Content wrapper (no background - lets animated background show through) */
 .content {
-    max-width: min(480px, 100%);
+    max-width: min(540px, 100%);
     margin: 0 auto;
     padding: clamp(0.5rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
     position: relative;
@@ -308,27 +308,8 @@ body::before {
     text-overflow: ellipsis;
 }
 
-.link-row .link {
-    align-items: center;
-    text-align: center;
-    padding: clamp(1rem, 2.5vw, 1.375rem) clamp(0.75rem, 2vw, 1rem);
-    min-height: 96px;
-    justify-content: center;
-}
-
-.link-row .link .link-header {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.35rem;
-}
-
-.link-row .link .link-icon {
-    margin-right: 0;
-}
-
 .link-row .link .link-url {
     padding-left: 0;
-    text-align: center;
 }
 
 /* Footer */
