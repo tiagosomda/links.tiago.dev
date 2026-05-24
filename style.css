@@ -89,7 +89,7 @@ body::before {
 
 /* Content wrapper (no background - lets animated background show through) */
 .content {
-    max-width: min(660px, 100%);
+    max-width: min(825px, 100%);
     margin: 0 auto;
     padding: clamp(0.5rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
     position: relative;
